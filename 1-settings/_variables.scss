@@ -1,0 +1,33 @@
+/**
+* variables
+*
+* @package WP-Minima
+*/
+
+/*
+############################################
+        Layout Related Variables
+############################################
+*/
+
+/*
+* Breakpoints
+*
+* We are mobile first, So the breakpoint starts at 0
+*/
+$mobile : 0px;
+$tab    : 546px;
+$laptop : 768px;
+$desktop: 1200px;
+
+/*
+############################################
+        Color Related Variables
+############################################
+*/
+
+$primary    : #16cca1;
+$secondary  : #3ed78e;
+$contrast   : #EBBA84;
+$black      : #4a4a4a;
+$white      : #fdfeff;
