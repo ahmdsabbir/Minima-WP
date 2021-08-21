@@ -1,0 +1,10 @@
+/**
+* import common styles for all generic pages
+* like header, footer, and sidebar etc.
+*
+* @package WP-Minima
+*/
+
+@import '01-settings/all';
+@import '02-base/all';
+@import '03-utilities/all';
