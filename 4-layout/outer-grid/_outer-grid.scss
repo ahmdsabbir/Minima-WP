@@ -1,0 +1,91 @@
+/**
+* outer grid
+*
+* @package WP-Minima
+*/
+
+
+.wrapper {
+    max-width: 1200px;
+    max-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+    padding: 1rem;
+}
+
+header,
+main,
+.left,
+.right,
+footer {
+    grid-column: 1 / -1;
+}
+
+
+// Aside media queries
+
+@media (min-width: 800px) {
+    
+    .wrapper__left, .wrapper__right {
+        gap: 2rem;
+    }
+    
+    // for right aside
+    .wrapper__right {
+        
+        grid-template-columns: minmax(0, 1fr) 300px;
+        
+        .main {
+            grid-column: 1 / 2;
+            background: #fff;
+        }
+        .left {
+            display: none;
+        }
+        .right {
+            grid-column: 2 / 3;
+            background: #bbbbbb;
+            height: 100%;
+        }
+    }
+    
+    // for left aside
+    
+    .wrapper__left {
+
+        grid-template-columns: 300px minmax(0, 1fr);
+        
+        .main {
+            grid-column: 2 / 3;
+            background: #fff;
+        }
+        .left {
+            background: #bbbbbb;
+            height: 100%;
+            grid-column: 1 / 2;
+            grid-row: 2
+        }
+        .right {
+            display: none;
+        }
+}
+
+.wrapper__both {
+     grid-template-columns: minmax(140px, auto) 1fr minmax(140px, auto);
+     gap: 2rem;
+    .main {
+        grid-area: 2 / 2 / 3;
+        
+    }
+    .left {
+        grid-area: 2 / 1 / 2;
+        
+    }
+    .right {
+        grid-area: 2 / 3 / 4;
+    }
+}
+
+}
