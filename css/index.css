@@ -811,6 +811,11 @@ a img.aligncenter {
   }
 }
 
+body {
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
+
 /**
 * import common styles for all generic pages
 * like header, footer, and sidebar etc.
