@@ -17,8 +17,8 @@
 
 header,
 main,
-.left,
-.right,
+.sidebar-left,
+.sidebar-right,
 footer {
     grid-column: 1 / -1;
 }
@@ -28,12 +28,12 @@ footer {
 
 @media (min-width: 800px) {
     
-    .wrapper__left, .wrapper__right {
-        gap: 2rem;
+    .with-left-sidebar, .with-right-sidebar {
+        gap: $row-gap $column-gap;
     }
     
-    // for right aside
-    .wrapper__right {
+    // with right aside
+    .with-right-sidebar {
         
         grid-template-columns: minmax(0, 1fr) 300px;
         
@@ -51,9 +51,9 @@ footer {
         }
     }
     
-    // for left aside
+    // with left aside
     
-    .wrapper__left {
+    .with-left-sidebar {
 
         grid-template-columns: 300px minmax(0, 1fr);
         
@@ -72,9 +72,9 @@ footer {
         }
 }
 
-.wrapper__both {
+    .with-both-sidebar {
      grid-template-columns: minmax(140px, auto) 1fr minmax(140px, auto);
-     gap: 2rem;
+     gap: $row-gap $column-gap;
     .main {
         grid-area: 2 / 2 / 3;
         
