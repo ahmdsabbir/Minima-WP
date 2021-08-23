@@ -30,3 +30,40 @@ h3 {font-size: $font-size-h3;}
 h4 {font-size: $font-size-h4;}
 h5 {font-size: $font-size-h5;}
 h6 {font-size: $font-size-h6;}
+
+
+
+// text aligning
+.text-cetner {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+// text overflow
+.text-ellipsis {
+    text-overflow: ellipsis; 
+}
+
+// text ransform
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+

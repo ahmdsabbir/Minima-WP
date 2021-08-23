@@ -1,9 +1,17 @@
 /**
 * import all base
 */
+html {
+    // defines what 1 rem is
+    font-size: clamp(12px, calc(.8rem + .25vw), 20px);
+    font-weight: 400;
+    line-height: 1.7;
 
-@import 'typography';
-@import 'links';
+} 
+
+
 @import 'forms';
+@import 'links';
 @import 'media';
+@import 'typography';
 @import 'misc';

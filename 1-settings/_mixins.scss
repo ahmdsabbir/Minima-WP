@@ -1,3 +1,65 @@
 /**
 * mixins
 */
+
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+//centering element
+@mixin absolute-center{
+    display: grid;
+    place-items: center;
+}
+
+// flex card style
+
+@mixin flex-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@mixin flex-card-child {
+    flex: 1 1 25%;
+}
+
+// card
+@mixin card {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(25rem, 1fr));
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+@mixin card-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+//full-width layout
+@mixin full-layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+// left or  right siedebar
+@mixin sidebar {
+    display: grid;
+    grid-template-columns: minmax(150px, 25%) 1fr;
+}
+
+// clamp card for more responsiveness
+@mixin clamp-card {
+    width: clamp(23ch, 50%, 46ch);
+    display: flex;
+    flex-direction: colulmn;
+    padding: 1rem;
+}

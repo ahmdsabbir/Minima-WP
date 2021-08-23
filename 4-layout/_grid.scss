@@ -3,7 +3,10 @@
 *
 * @package WP-Minima
 */
-
+body {
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
 $breakpoints: (
   sm: 0, // We are mobile first so we start from 0
   md: 768px,
@@ -27,3 +30,6 @@ $breakpoints: (
     }
   }
 }
+
+
+
