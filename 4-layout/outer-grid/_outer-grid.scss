@@ -13,15 +13,13 @@
     grid-auto-flow: row;
     grid-template-columns: 100%;
     padding: 1rem;
+
+    > * {
+        grid-column: 1 / -1;
+    }
 }
 
-header,
-main,
-.sidebar-left,
-.sidebar-right,
-footer {
-    grid-column: 1 / -1;
-}
+
 
 
 // Aside media queries
@@ -35,14 +33,11 @@ footer {
     // with right aside
     .with-right-sidebar {
         
-        grid-template-columns: minmax(0, 1fr) 300px;
+         grid-template-columns: minmax(0, 1fr) 300px;
         
         .main {
             grid-column: 1 / 2;
-            background: #fff;
-        }
-        .sidebar-left {
-            display: none;
+            background: #fff;        
         }
         .sidebar-right {
             grid-column: 2 / 3;
@@ -57,6 +52,7 @@ footer {
 
         grid-template-columns: 300px minmax(0, 1fr);
         
+        
         .main {
             grid-column: 2 / 3;
             background: #fff;
@@ -67,9 +63,7 @@ footer {
             grid-column: 1 / 2;
             grid-row: 2
         }
-        .sidebar-right {
-            display: none;
-        }
+
 }
 
     .with-both-sidebar {

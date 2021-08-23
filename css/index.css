@@ -826,11 +826,7 @@ a img.aligncenter {
   padding: 1rem;
 }
 
-header,
-main,
-.sidebar-left,
-.sidebar-right,
-footer {
+.wrapper > * {
   grid-column: 1 / -1;
 }
 
@@ -844,9 +840,6 @@ footer {
   .with-right-sidebar .main {
     grid-column: 1 / 2;
     background: #fff;
-  }
-  .with-right-sidebar .sidebar-left {
-    display: none;
   }
   .with-right-sidebar .sidebar-right {
     grid-column: 2 / 3;
@@ -865,9 +858,6 @@ footer {
     height: 100%;
     grid-column: 1 / 2;
     grid-row: 2;
-  }
-  .with-left-sidebar .sidebar-right {
-    display: none;
   }
   .with-both-sidebar {
     grid-template-columns: minmax(140px, auto) 1fr minmax(140px, auto);
