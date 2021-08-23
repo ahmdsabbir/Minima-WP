@@ -4,6 +4,48 @@
 * @package WP-Minima
 */
 
+// import 1-settings/all styles
+// ==============================================================
+@import '1-settings/all';
+
+// import 2-base/all styles
+// ==============================================================
+@import '2-base/all';
+
+// import 3-utilities/all styles
+// ==============================================================
+@import '3-utilities/all';
+
+// import 4-layout/all styles
+// ==============================================================
+@import '4-layout/all';
+
+
+// import component styles
+// ==============================================================
+@import '5-components/components';
+
 // import common styles
 // ==============================================================
 @import 'common';
+
+// import 404 styles
+// ==============================================================
+@import '404';
+
+// import archive styles
+// ==============================================================
+@import 'archive';
+
+
+// import page styles
+// ==============================================================
+@import 'page';
+
+// import search styles
+// ==============================================================
+@import 'search';
+
+// import single styles
+// ==============================================================
+@import 'single';
