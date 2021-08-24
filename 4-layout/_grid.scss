@@ -5,16 +5,27 @@
 */
 
 $breakpoints: (
-  sm: 0, // We are mobile first so we start from 0
-  md: 768px,
-  lg: 1200px,
+  sm: $sm, // We are mobile first so we start from 0
+  md: $md,
+  lg: $lg,
+  xl: $xl,
 ) !default;
 
 .container {
+  margin: 0 auto;
+  max-width: $lg;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1em;
+  gap: $row-gap $column-gap;
+
+  > * {
+    grid-column: 1 / -1;
+  }
 }
+
+
+
+
 
 @each $breakpoint in map-keys($breakpoints) {
   $breakpoint-width: map-get($breakpoints, $breakpoint);
@@ -32,16 +43,13 @@ $breakpoints: (
 // order
 
 $breakpoints-order: (
-  sm-order: 0, // We are mobile first so we start from 0
-  md-order: 768px,
-  lg-order: 1200px,
+  sm-order: $sm, // We are mobile first so we start from 0
+  md-order: $md,
+  lg-order: $lg,
+  xl-order: $xl,
 ) !default;
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1em;
-}
+
 
 @each $breakpoint in map-keys($breakpoints-order) {
   $breakpoint-width: map-get($breakpoints-order, $breakpoint);
@@ -53,4 +61,18 @@ $breakpoints-order: (
       }
     }
   }
+}
+
+
+
+// container-fill automatically works on mobiel devie and media querey on a certain point will make it perfect.
+@media  (min-width: $lg) {
+  .container-full {
+    margin: 0 auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $row-gap $column-gap;
+}
+
 }

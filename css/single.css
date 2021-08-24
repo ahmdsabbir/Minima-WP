@@ -13,6 +13,46 @@
 * import all settings
 */
 /**
+* variables
+*
+* @package WP-Minima
+*/
+/*
+############################################
+        Layout Related Variables
+############################################
+*/
+/*
+* Breakpoints
+*
+* We are mobile first, So the breakpoint starts at 0
+*/
+/*
+############################################
+        spacing Related Variables
+############################################
+*/
+/*
+############################################
+        Color Related Variables
+############################################
+*/
+/*
+############################################
+        Font Related Variables
+############################################
+*/
+/*
+############################################
+        Margin Related Variables
+############################################
+*/
+/*
+############################################
+        Line-height Related Variables
+############################################
+*/
+/**
 * normalizer for browser compatibility
 *
 * @package WP-Minima
@@ -23,12 +63,24 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
 html {
-  line-height: 1.15;
+  line-height: 1.6;
   /* 1 */
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   /* 2 */
   text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  /* only workds on mack os */
+  -webkit-font-smoothing: antialiased;
+  /* only workds on mack os */
   box-sizing: border-box;
 }
 
@@ -63,8 +115,14 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+}
+
+/* font style for whole site */
+body {
+  font-size: clamp(12px, calc(.8rem + .25vw), 20px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  box-sizing: border-box;
 }
 
 /**
@@ -381,46 +439,6 @@ template {
 * functions
 */
 /**
-* variables
-*
-* @package WP-Minima
-*/
-/*
-############################################
-        Layout Related Variables
-############################################
-*/
-/*
-* Breakpoints
-*
-* We are mobile first, So the breakpoint starts at 0
-*/
-/*
-############################################
-        spacing Related Variables
-############################################
-*/
-/*
-############################################
-        Color Related Variables
-############################################
-*/
-/*
-############################################
-        Font Related Variables
-############################################
-*/
-/*
-############################################
-        Margin Related Variables
-############################################
-*/
-/*
-############################################
-        Line-height Related Variables
-############################################
-*/
-/**
 * animations
 */
 /**
@@ -473,6 +491,39 @@ h5 {
 
 h6 {
   font-size: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 /**
@@ -610,39 +661,6 @@ a img.aligncenter {
 /*
 * Utility styles for typography
 */
-.text-cetner {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-justify {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.text-ellipsis {
-  text-overflow: ellipsis;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
-}
-
 /*
 * Utility styles for links
 */

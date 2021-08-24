@@ -4,13 +4,47 @@
 * @package WP-Minima
 */
 /**
-* import common styles for all generic pages
-* like header, footer, and sidebar etc.
+* import all settings
+*/
+/**
+* variables
 *
 * @package WP-Minima
 */
-/**
-* import all settings
+/*
+############################################
+        Layout Related Variables
+############################################
+*/
+/*
+* Breakpoints
+*
+* We are mobile first, So the breakpoint starts at 0
+*/
+/*
+############################################
+        spacing Related Variables
+############################################
+*/
+/*
+############################################
+        Color Related Variables
+############################################
+*/
+/*
+############################################
+        Font Related Variables
+############################################
+*/
+/*
+############################################
+        Margin Related Variables
+############################################
+*/
+/*
+############################################
+        Line-height Related Variables
+############################################
 */
 /**
 * normalizer for browser compatibility
@@ -23,12 +57,24 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
 html {
-  line-height: 1.15;
+  line-height: 1.6;
   /* 1 */
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   /* 2 */
   text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  /* only workds on mack os */
+  -webkit-font-smoothing: antialiased;
+  /* only workds on mack os */
   box-sizing: border-box;
 }
 
@@ -63,8 +109,14 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+}
+
+/* font style for whole site */
+body {
+  font-size: clamp(12px, calc(.8rem + .25vw), 20px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  box-sizing: border-box;
 }
 
 /**
@@ -381,46 +433,6 @@ template {
 * functions
 */
 /**
-* variables
-*
-* @package WP-Minima
-*/
-/*
-############################################
-        Layout Related Variables
-############################################
-*/
-/*
-* Breakpoints
-*
-* We are mobile first, So the breakpoint starts at 0
-*/
-/*
-############################################
-        spacing Related Variables
-############################################
-*/
-/*
-############################################
-        Color Related Variables
-############################################
-*/
-/*
-############################################
-        Font Related Variables
-############################################
-*/
-/*
-############################################
-        Margin Related Variables
-############################################
-*/
-/*
-############################################
-        Line-height Related Variables
-############################################
-*/
-/**
 * animations
 */
 /**
@@ -473,6 +485,39 @@ h5 {
 
 h6 {
   font-size: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 /**
@@ -610,39 +655,6 @@ a img.aligncenter {
 /*
 * Utility styles for typography
 */
-.text-cetner {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-justify {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.text-ellipsis {
-  text-overflow: ellipsis;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
-}
-
 /*
 * Utility styles for links
 */
@@ -696,12 +708,18 @@ a img.aligncenter {
 * @package WP-Minima
 */
 .container {
+  margin: 0 auto;
+  max-width: 960px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1em;
+  gap: 1rem 1rem;
 }
 
-@media (min-width: 0) {
+.container > * {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 0px) {
   .sm-1 {
     grid-column: span 1;
   }
@@ -779,7 +797,7 @@ a img.aligncenter {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .lg-1 {
     grid-column: span 1;
   }
@@ -818,13 +836,46 @@ a img.aligncenter {
   }
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1em;
+@media (min-width: 1200px) {
+  .xl-1 {
+    grid-column: span 1;
+  }
+  .xl-2 {
+    grid-column: span 2;
+  }
+  .xl-3 {
+    grid-column: span 3;
+  }
+  .xl-4 {
+    grid-column: span 4;
+  }
+  .xl-5 {
+    grid-column: span 5;
+  }
+  .xl-6 {
+    grid-column: span 6;
+  }
+  .xl-7 {
+    grid-column: span 7;
+  }
+  .xl-8 {
+    grid-column: span 8;
+  }
+  .xl-9 {
+    grid-column: span 9;
+  }
+  .xl-10 {
+    grid-column: span 10;
+  }
+  .xl-11 {
+    grid-column: span 11;
+  }
+  .xl-12 {
+    grid-column: span 12;
+  }
 }
 
-@media (min-width: 0) {
+@media (min-width: 0px) {
   .sm-order-1 {
     order: 1;
   }
@@ -902,7 +953,7 @@ a img.aligncenter {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .lg-order-1 {
     order: 1;
   }
@@ -938,6 +989,55 @@ a img.aligncenter {
   }
   .lg-order-12 {
     order: 12;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl-order-1 {
+    order: 1;
+  }
+  .xl-order-2 {
+    order: 2;
+  }
+  .xl-order-3 {
+    order: 3;
+  }
+  .xl-order-4 {
+    order: 4;
+  }
+  .xl-order-5 {
+    order: 5;
+  }
+  .xl-order-6 {
+    order: 6;
+  }
+  .xl-order-7 {
+    order: 7;
+  }
+  .xl-order-8 {
+    order: 8;
+  }
+  .xl-order-9 {
+    order: 9;
+  }
+  .xl-order-10 {
+    order: 10;
+  }
+  .xl-order-11 {
+    order: 11;
+  }
+  .xl-order-12 {
+    order: 12;
+  }
+}
+
+@media (min-width: 960px) {
+  .container-full {
+    margin: 0 auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 1rem;
   }
 }
 
