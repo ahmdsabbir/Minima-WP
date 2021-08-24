@@ -23,7 +23,7 @@
 
 // Aside media queries
 
-@media (min-width: 800px) {
+@media (min-width: $md) {
     
     .with-left-sidebar, .with-right-sidebar {
         gap: $row-gap $column-gap;

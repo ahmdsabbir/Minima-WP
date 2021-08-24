@@ -27,3 +27,30 @@ $breakpoints: (
     }
   }
 }
+
+
+// order
+
+$breakpoints-order: (
+  sm-order: 0, // We are mobile first so we start from 0
+  md-order: 768px,
+  lg-order: 1200px,
+) !default;
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
+}
+
+@each $breakpoint in map-keys($breakpoints-order) {
+  $breakpoint-width: map-get($breakpoints-order, $breakpoint);
+  
+  @media (min-width: $breakpoint-width) {
+    @for $i from 1 through 12 {
+      .#{$breakpoint}-#{$i} {
+        order:  $i;
+      }
+    }
+  }
+}
