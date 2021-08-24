@@ -4,6 +4,12 @@
 * @package WP-Minima
 */
 /**
+* import common styles for all generic pages
+* like header, footer, and sidebar etc.
+*
+* @package WP-Minima
+*/
+/**
 * import all settings
 */
 /**
@@ -713,6 +719,7 @@ a img.aligncenter {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem 1rem;
+  padding: 1rem;
 }
 
 .container > * {
@@ -1038,71 +1045,7 @@ a img.aligncenter {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem 1rem;
-  }
-}
-
-/**
-* outer grid
-*
-* @package WP-Minima
-*/
-.wrapper {
-  max-width: 1200px;
-  max-height: 100vh;
-  margin: 0 auto;
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 100%;
-  padding: 1rem;
-}
-
-.wrapper > * {
-  grid-column: 1 / -1;
-}
-
-@media (min-width: 768px) {
-  .with-left-sidebar, .with-right-sidebar {
-    gap: 1rem 1rem;
-  }
-  .with-right-sidebar {
-    grid-template-columns: minmax(0, 1fr) 300px;
-  }
-  .with-right-sidebar .main {
-    grid-column: 1 / 2;
-  }
-  .with-right-sidebar .left-sidebar {
-    display: none;
-  }
-  .with-right-sidebar .right-sidebar {
-    grid-column: 2 / 3;
-    height: 100%;
-  }
-  .with-left-sidebar {
-    grid-template-columns: 300px minmax(0, 1fr);
-  }
-  .with-left-sidebar .main {
-    grid-column: 2 / 3;
-  }
-  .with-left-sidebar .left-sidebar {
-    height: 100%;
-    grid-column: 1 / 2;
-    grid-row: 2;
-  }
-  .with-left-sidebar .right-sidebar {
-    display: none;
-  }
-  .with-both-sidebar {
-    grid-template-columns: minmax(140px, 20%) 1fr minmax(140px, 20%);
-    gap: 1rem 1rem;
-  }
-  .with-both-sidebar .main {
-    grid-area: 2 / 2 / 3;
-  }
-  .with-both-sidebar .left-sidebar {
-    grid-area: 2 / 1 / 2;
-  }
-  .with-both-sidebar .right-sidebar {
-    grid-area: 2 / 3 / 4;
+    padding: 1rem;
   }
 }
 /*# sourceMappingURL=index.css.map */

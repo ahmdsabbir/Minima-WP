@@ -17,7 +17,7 @@ $breakpoints: (
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: $row-gap $column-gap;
-
+  padding: $padding;
   > * {
     grid-column: 1 / -1;
   }
@@ -73,6 +73,7 @@ $breakpoints-order: (
     display: grid;
     grid-template-columns: 1fr;
     gap: $row-gap $column-gap;
+    padding: $padding;
 }
 
 }
