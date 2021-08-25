@@ -1,7 +1,10 @@
-/*
-* Utility styles for typography
+/**
+* Utility style for Typography
+*
+* @package Minima-WP
 */
-// text aligning
+
+
 .text-center {
     text-align: center;
 }
@@ -16,21 +19,18 @@
     text-justify: inter-word;
 }
 
-// text overflow
+
 .text-ellipsis {
     text-overflow: ellipsis; 
 }
 
-// text transform
 
 .text-uppercase {
   text-transform: uppercase;
 }
-
 .text-lowercase {
   text-transform: lowercase;
 }
-
 .text-capitalize {
   text-transform: capitalize;
 }

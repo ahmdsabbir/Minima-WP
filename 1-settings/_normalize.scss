@@ -1,10 +1,12 @@
 /**
-* normalizer for browser compatibility
+* Browser Reset
 *
-* @package WP-Minima
-*
+* Inspired By necoas/normalizer
 * @link https://github.com/necolas/normalize.css/blob/master/normalize.css
+*
+* @package Minima-WP
 */
+
 
 /**
  * 1. Correct the line height in all browsers.
@@ -28,8 +30,11 @@
     box-sizing              : border-box;
   }
 
-    /* Text level semantics
-     ========================================================================== */
+/*
+############################################
+        Text level semantics
+############################################
+*/
   
   /**
    * Remove the margin in all browsers.
@@ -76,9 +81,11 @@
     display: block;
   }
 
-
-  /* Grouping content
-     ========================================================================== */
+/*
+############################################
+        Grouping content
+############################################
+*/
   
   /**
    * 1. Add the correct box sizing in Firefox.
@@ -169,8 +176,12 @@
     top: -0.5em;
   }
   
-  /* Embedded content
-     ========================================================================== */
+ 
+/*
+############################################
+        Embedded content
+############################################
+*/   
   
   /**
    * Remove the border on images inside links in IE 10.
@@ -179,9 +190,12 @@
   img {
     border-style: none;
   }
-  
-  /* Forms
-     ========================================================================== */
+ 
+/*
+############################################
+        Forms
+############################################
+*/
   
   /**
    * 1. Change the font styles in all browsers.
@@ -341,8 +355,11 @@
     font              : inherit; /* 2 */
   }
   
-  /* Interactive
-     ========================================================================== */
+/*
+############################################
+        Interactive
+############################################
+*/
   
   /*
    * Add the correct display in Edge, IE 10+, and Firefox.
@@ -359,9 +376,12 @@
   summary {
     display: list-item;
   }
-  
-  /* Misc
-     ========================================================================== */
+
+/*
+############################################
+        Misc
+############################################
+*/
   
   /**
    * Add the correct display in IE 10+.
