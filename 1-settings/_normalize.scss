@@ -13,7 +13,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-*,
 *::before,
 *::after {
     padding   : 0;
@@ -22,7 +21,7 @@
 }
 
  html {
-    line-height             : $lineheight; /* 1 */
+    line-height             : $lh; /* 1 */
     text-size-adjust        : 100%; /* 2 */
     text-rendering          : optimizeLegibility;  
     -moz-osx-font-smoothing : grayscale; /* only workds on mack os */
@@ -68,9 +67,9 @@
    }
 /* font style for whole site */
    body {
-     font-size  : $base-font-size;
-     font-family: $base-font-family;
-     font-weight: $base-font-weight;
+     font-size  : $fs-base;
+     font-family: $ff-base;
+     font-weight: $fw-base;
      box-sizing : border-box;
    }
   /**
@@ -105,7 +104,7 @@
   
   pre {
     font-family : monospace, monospace; /* 1 */
-    font-size   : 1em; /* 2 */
+    font-size   : $fs-pre; /* 2 */
   }
   
   /**

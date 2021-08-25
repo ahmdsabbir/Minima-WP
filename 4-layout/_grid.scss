@@ -4,20 +4,18 @@
 * @package Minima-WP
 */
 
-$breakpoints: (
-  sm: $sm, // We are mobile first so we start from 0
-  md: $md,
-  lg: $lg,
-  xl: $xl,
-) !default;
-
+/*
+############################################
+        container class
+############################################
+*/
 .container {
   margin                : 0 auto;
   max-width             : $lg;
   display               : grid;
   grid-template-columns : repeat(12, 1fr);
-  gap                   : $row-gap $column-gap;
-  padding               : $padding;
+  gap                   : $g-row $g-column;
+  padding               : $p-base;
 
   > * {
     grid-column: 1 / -1;
@@ -25,6 +23,12 @@ $breakpoints: (
 
 }
 
+
+/*
+############################################
+        12 Column Grid
+############################################
+*/
 @each $breakpoint in map-keys($breakpoints) {
   $breakpoint-width: map-get($breakpoints, $breakpoint);
   
@@ -37,39 +41,34 @@ $breakpoints: (
   }
 }
 
-
-// order
-$breakpoints-order: (
-  sm-order: $sm, // We are mobile first so we start from 0
-  md-order: $md,
-  lg-order: $lg,
-  xl-order: $xl,
-) !default;
-
-
-@each $breakpoint in map-keys($breakpoints-order) {
-  $breakpoint-width: map-get($breakpoints-order, $breakpoint);
+/*
+############################################
+        Grid Order
+############################################
+*/
+@each $breakpoint in map-keys($breakpoints) {
+  $breakpoint-width: map-get($breakpoints, $breakpoint);
   
   @media (min-width: $breakpoint-width) {
     @for $i from 1 through 12 {
-      .#{$breakpoint}-#{$i} {
+      .#{$breakpoint}-order-#{$i} {
         order:  $i;
       }
     }
   }
 }
 
-
-
-// container-fill automatically works on mobiel devie and media querey on a certain point will make it perfect.
+/*
+*container-fill automatically works on mobile device and media query on a certain point will make it perfect.
+*/
 @media  (min-width: $lg) {
   .container-full {
     margin                : 0 auto;
     max-width             : 100%;
     display               : grid;
     grid-template-columns : 1fr;
-    gap                   : $row-gap $column-gap;
-    padding               : $padding;
+    gap                   : $g-row $g-column;
+    padding               : $p-base;
   }
 
 }
