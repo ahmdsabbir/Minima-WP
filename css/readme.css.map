@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA;;;;EAIE",
-    "sources": [
-        "../0-vendor/readme.scss"
-    ],
-    "names": [],
-    "file": "readme.css"
-}

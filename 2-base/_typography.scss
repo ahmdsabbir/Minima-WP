@@ -10,17 +10,15 @@ p {
     word-break      : break-all;
     word-break      : break-word;
     hyphens         : auto;
-    color           : $color-para;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-heading;
-    font-style: $font-style-heading;
-    font-weight: $font-weight-heading;
-    color: $color-heading;
-    line-height: $lineheight-heading;
-    margin-bottom: $margin-bottom-heading;
-    
+    font-family     : $font-family-heading;
+    font-style      : $font-style-heading;
+    font-weight     : $font-weight-heading;
+    color           : $color-heading;
+    line-height     : $lineheight-heading;
+    margin-bottom   : $margin-bottom-heading;
     word-break: break-word;
 }
 
@@ -30,41 +28,3 @@ h3 {font-size: $font-size-h3;}
 h4 {font-size: $font-size-h4;}
 h5 {font-size: $font-size-h5;}
 h6 {font-size: $font-size-h6;}
-
-
-
-
-// text aligning
-.text-center {
-    text-align: center;
-}
-.text-left {
-    text-align: left;
-}
-.text-right {
-    text-align: right;
-}
-.text-justify {
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-// text overflow
-.text-ellipsis {
-    text-overflow: ellipsis; 
-}
-
-// text ransform
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
-}
-
