@@ -6,6 +6,7 @@ $theme-colors: (
 ) !default;
 
 $breakpoints: (
+  xsm: $xsm,
   sm: $sm,
   md: $md,
   lg: $lg,

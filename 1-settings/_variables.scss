@@ -74,8 +74,9 @@ $mb-heading     : 1rem;
 *
 * We are mobile first, So the breakpoint starts at 0
 */
-$sm : 0px;
-$md : 768px;
+$xsm : 0px;
+$sm  : 576px;
+$md  : 768px;
 $lg: 960px;
 $xl: 1200px;
 
