@@ -4,23 +4,22 @@
 * @package Minima-WP
 */
 
+//variables
+$btn-types: "fluid" "rounded";
 
 .btn {
-    display             : inline-block;
-    padding             : .375rem .75rem;
-    font-weight         : $fw-btn;
-    font-size           : $fs-btn;
-    line-height         : $lh-btn;
-    border              : 1px solid transparent;
-    border-radius       : .25rem;
-    color               : $clr-btn;
-    background-color    : transparent;
-    cursor              : pointer;  
+    @include btn;
+}
+.btn-fluid {
+    @include btn('fluid');
+}
+.btn-rounded {
+    @include btn('rounded')
 }
 
-@each $name,$color in $theme-colors {
-    .btn-#{$name}{
-        background-color: $color;
-        color: $white;
+@each $color-name, $value in $theme-colors {
+    .btn-#{$color-name} {
+        background-color: $value;
+        color           : btn-text-color($value); 
     }
- }
+}

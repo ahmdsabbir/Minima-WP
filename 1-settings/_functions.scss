@@ -3,3 +3,25 @@
 *
 * @package Minima-WP
 */
+
+  
+/**
+* Functions
+*
+* @package Minima-WP
+*/
+
+/*
+############################################
+        Button Related Functions
+############################################
+*/
+@function btn-text-color($color) {
+
+    @if (lightness($color) > 50) {
+        @return $black;
+    } @else {
+        @return $white;
+    }
+
+}

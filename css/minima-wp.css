@@ -132,6 +132,14 @@ main {
   display: block;
 }
 
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /*
 ############################################
         Grouping content
@@ -763,10 +771,11 @@ a img.aligncenter {
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: row;
   gap: 1rem 1rem;
   padding: 1rem;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .container > *,
@@ -1112,6 +1121,64 @@ a img.aligncenter {
   .xl-order-12 {
     order: 12;
   }
+}
+
+/* grid justify contnet */
+.g-jstart {
+  justify-content: start;
+}
+
+.g-jeven {
+  justify-content: space-evenly;
+}
+
+.g-jaround {
+  justify-content: space-around;
+}
+
+.g-jbetween {
+  justify-content: space-between;
+}
+
+.g-jcenter {
+  justify-content: center;
+}
+
+.g-jend {
+  justify-content: end;
+}
+
+.g-jeven {
+  justify-content: space-evenly;
+}
+
+/* align content */
+.g-astart {
+  align-content: start;
+}
+
+.g-aeven {
+  align-content: space-evenly;
+}
+
+.g-aaround {
+  align-content: space-around;
+}
+
+.g-abetween {
+  align-content: space-between;
+}
+
+.g-acenter {
+  align-content: center;
+}
+
+.g-aend {
+  align-content: end;
+}
+
+.g-aeven {
+  align-content: space-evenly;
 }
 
 /**
