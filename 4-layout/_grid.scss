@@ -10,55 +10,37 @@
 ############################################
 */
 
+// full width container
+.container,
 .container-thin {
-  width                 : 100%;
-}
-
-.container-full {
-  max-width: 100%;
-
-}
-
-.container-thin,
-.container-full {
-
-  /* there is a problem while using padding inside a  cntainer classes
-    problem comes only to mobiel devices.
-    A horizontal bar created by padding. widhout padding its ok. and padding can be used inside the div 
-  */
+  max-width             : 100%;
   display               : grid;
   grid-template-columns : repeat(12, 1fr);
-  gap                   : $g-row $g-column; 
-  margin-right          : auto;
-  margin-left           : auto;
-
+  gap                   : $g-row $g-column;
+  padding               : $p-base;
+  margin-left: auto ;
+  margin-right: auto ;
   > * {
     grid-column: 1 / -1;
   }
+
 }
 
-/*
-############################################
-        max width for container-thin
-############################################
-*/
- @each $breakpoint in map-keys($breakpoints) {
-   $breakpoint-width: map-get($breakpoints, $breakpoint);
-  
-   @media (min-width: $breakpoint-width) {
 
-     @if $breakpoint-width != $xsm {
+
+@each $breakpoint in map-keys($breakpoints) {
+  $breakpoint-width: map-get($breakpoints, $breakpoint);
+  
+  @media (min-width: $breakpoint-width) {
+
+    @if $breakpoint-width != $sm {
       .container-thin {
-        // max-width: 90%;
-         max-width: $breakpoint-width;
-              }
+        max-width: 90%;
+      }
     }
     
   }
- }
-
-
-
+}
 
 /*
 ############################################
@@ -93,5 +75,4 @@
     }
   }
 }
-
 

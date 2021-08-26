@@ -758,58 +758,37 @@ a img.aligncenter {
         container class
 ############################################
 */
+.container,
 .container-thin {
-  width: 100%;
-}
-
-.container-full {
   max-width: 100%;
-}
-
-.container-thin,
-.container-full {
-  /* there is a problem while using padding inside a  cntainer classes
-    problem comes only to mobiel devices.
-    A horizontal bar created by padding. widhout padding its ok. and padding can be used inside the div 
-  */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem 1rem;
-  margin-right: auto;
+  padding: 1rem;
   margin-left: auto;
+  margin-right: auto;
 }
 
-.container-thin > *,
-.container-full > * {
+.container > *,
+.container-thin > * {
   grid-column: 1 / -1;
-}
-
-/*
-############################################
-        max width for container-thin
-############################################
-*/
-@media (min-width: 576px) {
-  .container-thin {
-    max-width: 576px;
-  }
 }
 
 @media (min-width: 768px) {
   .container-thin {
-    max-width: 768px;
+    max-width: 90%;
   }
 }
 
 @media (min-width: 960px) {
   .container-thin {
-    max-width: 960px;
+    max-width: 90%;
   }
 }
 
 @media (min-width: 1200px) {
   .container-thin {
-    max-width: 1200px;
+    max-width: 90%;
   }
 }
 
@@ -818,45 +797,6 @@ a img.aligncenter {
         12 Column Grid
 ############################################
 */
-@media (min-width: 0px) {
-  .xsm-1 {
-    grid-column: span 1;
-  }
-  .xsm-2 {
-    grid-column: span 2;
-  }
-  .xsm-3 {
-    grid-column: span 3;
-  }
-  .xsm-4 {
-    grid-column: span 4;
-  }
-  .xsm-5 {
-    grid-column: span 5;
-  }
-  .xsm-6 {
-    grid-column: span 6;
-  }
-  .xsm-7 {
-    grid-column: span 7;
-  }
-  .xsm-8 {
-    grid-column: span 8;
-  }
-  .xsm-9 {
-    grid-column: span 9;
-  }
-  .xsm-10 {
-    grid-column: span 10;
-  }
-  .xsm-11 {
-    grid-column: span 11;
-  }
-  .xsm-12 {
-    grid-column: span 12;
-  }
-}
-
 @media (min-width: 576px) {
   .sm-1 {
     grid-column: span 1;
@@ -1018,45 +958,6 @@ a img.aligncenter {
         Grid Order
 ############################################
 */
-@media (min-width: 0px) {
-  .xsm-order-1 {
-    order: 1;
-  }
-  .xsm-order-2 {
-    order: 2;
-  }
-  .xsm-order-3 {
-    order: 3;
-  }
-  .xsm-order-4 {
-    order: 4;
-  }
-  .xsm-order-5 {
-    order: 5;
-  }
-  .xsm-order-6 {
-    order: 6;
-  }
-  .xsm-order-7 {
-    order: 7;
-  }
-  .xsm-order-8 {
-    order: 8;
-  }
-  .xsm-order-9 {
-    order: 9;
-  }
-  .xsm-order-10 {
-    order: 10;
-  }
-  .xsm-order-11 {
-    order: 11;
-  }
-  .xsm-order-12 {
-    order: 12;
-  }
-}
-
 @media (min-width: 576px) {
   .sm-order-1 {
     order: 1;
