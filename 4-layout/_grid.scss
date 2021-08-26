@@ -9,33 +9,34 @@
         container class
 ############################################
 */
-.container {
-  margin                : 0 auto;
-  max-width             : $lg;
+
+// full width container
+.container,
+.container-thin {
+  max-width             : 100%;
   display               : grid;
   grid-template-columns : repeat(12, 1fr);
   gap                   : $g-row $g-column;
-  padding               : $p-base;
+  padding               : $p-container;
+  margin-left           : auto;
+  margin-right          : auto;
 
   > * {
     grid-column: 1 / -1;
   }
 
-}
+  /*
+  * 12 Column Grid
+  */
 
-
-/*
-############################################
-        12 Column Grid
-############################################
-*/
-@each $breakpoint in map-keys($breakpoints) {
-  $breakpoint-width: map-get($breakpoints, $breakpoint);
-  
-  @media (min-width: $breakpoint-width) {
-    @for $i from 1 through 12 {
-      .#{$breakpoint}-#{$i} {
-        grid-column: span $i;
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-width: map-get($breakpoints, $breakpoint);
+    
+    @media (min-width: $breakpoint-width) {
+      @for $i from 1 through 12 {
+        .#{$breakpoint}-#{$i} {
+          grid-column: span $i;
+        }
       }
     }
   }
@@ -58,17 +59,3 @@
   }
 }
 
-/*
-*container-fill automatically works on mobile device and media query on a certain point will make it perfect.
-*/
-@media  (min-width: $lg) {
-  .container-full {
-    margin                : 0 auto;
-    max-width             : 100%;
-    display               : grid;
-    grid-template-columns : 1fr;
-    gap                   : $g-row $g-column;
-    padding               : $p-base;
-  }
-
-}
