@@ -64,7 +64,7 @@
     margin          : $m-btn;
     border          : none;
     border-radius   : $br-btn;
-    background-color: transparent;
+    //  background-color: transparent;
     text-align      : center;
     text-decoration : none;
     font-size       : $fs-btn;
@@ -73,7 +73,7 @@
     cursor          : pointer;
 
     &:hover {
-        color: $clr-btn;
+        color: rgba($clr-btn, .7);
     }
 }
 
@@ -85,6 +85,6 @@
     }
     @else if $type == 'fluid' {
         display: block;
-        width: 100%;
+        max-width: 100%;
     }
 }

@@ -4,121 +4,24 @@
 * @package Minima-WP
 */
 
-#header-wrapper {
-    .container {
-        align-items: center;
-       .nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: $f-gap;
-            align-items: center;
-            justify-content: flex-end;
-        }
-    }
+
+/* if for any reason we use container for nav  then following property will align elemtns center vertically */
+#header-wrapper .container {
+    align-items: center;
 }
+
 
 /* nav-default -1 */
 
+.nav-one, ul {
+            display: flex;
+            gap: $f-gap;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+}
+
 .nav-one {
-        display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-}
-
-
-       .nav-1 ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-
-            li {
-                margin: 0 0.5rem;
-            }
-        }
-
-        .nav-1-1 ul {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-end;
-                align-items: center;
-
-                 li {
-                    margin: 0 0.5rem;
-                 }
-        }
-
-// for bar 3
-.menu__bar-3 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $f-gap;
-    align-items: center;
-    
-
-    .nav {
-        margin-right: auto;
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-
-            li {
-                margin: 0 0.5rem;
-            }
-        }
-}
-
-
-    .nav-cta {
-             ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-
-            li {
-                margin: 0 0.5rem;
-            }
-        }
-    }
-}
-
-// for bar 4
-.menu__bar-4 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $f-gap;
-    align-items: center;
-    justify-content: space-between;
-
-    .nav {
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-
-        li {
-            margin: 0 0.5rem;
-        }
-    }
-}
-
-    .nav-cta {
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-
-        li {
-            margin: 0 0.5rem;
-        }
-
-    }
-}
-
+    // background-color: #cecece;
+    padding: 0.5rem .8rem 0.5rem 0;
 }

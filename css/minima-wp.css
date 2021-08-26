@@ -16,11 +16,18 @@
 /*
 ############################################
         Font Related Variables
+        ----------------------
+        fs  = font-size
+        fst = font-style
+        ff  = font-family
+        fw  = font-weight
 ############################################
 */
 /*
 ############################################
-Margin Related Variables
+        Border Related Variables
+        ------------------------
+        br = border-radious
 ############################################
 */
 /*
@@ -36,17 +43,39 @@ Margin Related Variables
 /*
 ############################################
         spacing Related Variables
+        -------------------------
+        g  = gap
+        p  = padding
+        m  = margin
+        mt = margin-top
+        mb = margin-bottom
 ############################################
 */
 /*
 ############################################
         Color Related Variables
+        -----------------------
+        clr = color
 ############################################
 */
 /*
 ############################################
         Line-height Related Variables
+        -----------------------------
+        lh = line height
 ############################################
+*/
+/*
+############################################
+        Misfit Variables
+        ----------------------
+        bw = border-width
+############################################
+*/
+/**
+* Maps
+*
+* @package Minima-WP
 */
 /**
 * Browser Reset
@@ -458,10 +487,25 @@ template {
 *
 * @package Minima-WP
 */
+/*
+############################################
+        Button Related Mixins
+############################################
+*/
 /**
 * Functions
 *
 * @package Minima-WP
+*/
+/**
+* Functions
+*
+* @package Minima-WP
+*/
+/*
+############################################
+        Button Related Functions
+############################################
 */
 /**
 * animations
@@ -493,7 +537,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-style: normal;
   font-weight: bolder;
-  color: #4a4a4a;
+  color: #050505;
   line-height: 1.2;
   margin-bottom: 1rem;
   word-break: break-word;
@@ -709,35 +753,80 @@ a img.aligncenter {
 * @package Minima-WP
 */
 .btn {
-  display: inline-block;
-  padding: .375rem .75rem;
-  font-weight: normal;
+  display: inline;
+  padding: 0.5rem 1rem;
+  margin: 0.54rem;
+  border: none;
+  border-radius: 1px;
+  text-align: center;
+  text-decoration: none;
   font-size: 1rem;
-  line-height: 1.5;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  color: #4a4a4a;
-  background-color: transparent;
+  font-weight: normal;
+  color: #050505;
   cursor: pointer;
 }
 
+.btn:hover {
+  color: rgba(5, 5, 5, 0.7);
+}
+
+.btn-fluid {
+  display: inline;
+  padding: 0.5rem 1rem;
+  margin: 0.54rem;
+  border: none;
+  border-radius: 1px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #050505;
+  cursor: pointer;
+  display: block;
+  max-width: 100%;
+}
+
+.btn-fluid:hover {
+  color: rgba(5, 5, 5, 0.7);
+}
+
+.btn-rounded {
+  display: inline;
+  padding: 0.5rem 1rem;
+  margin: 0.54rem;
+  border: none;
+  border-radius: 1px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #050505;
+  cursor: pointer;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-rounded:hover {
+  color: rgba(5, 5, 5, 0.7);
+}
+
 .btn-primary {
-  background-color: #16cca1;
+  background-color: #11A683;
   color: #fdfeff;
 }
 
 .btn-secondary {
   background-color: #3ed78e;
-  color: #fdfeff;
+  color: #050505;
 }
 
 .btn-contrast {
   background-color: #EBBA84;
-  color: #fdfeff;
+  color: #050505;
 }
 
 .btn-dark {
-  background-color: #4a4a4a;
+  background-color: #050505;
   color: #fdfeff;
 }
 
@@ -773,7 +862,7 @@ a img.aligncenter {
   grid-template-columns: repeat(12, 1fr);
   grid-auto-flow: row;
   gap: 1rem 1rem;
-  padding: 1rem;
+  padding: 0;
   margin-right: auto;
   margin-left: auto;
 }
@@ -806,7 +895,7 @@ a img.aligncenter {
         12 Column Grid
 ############################################
 */
-@media (min-width: 576px) {
+@media (min-width: 0px) {
   .sm-1 {
     grid-column: span 1;
   }
@@ -967,7 +1056,7 @@ a img.aligncenter {
         Grid Order
 ############################################
 */
-@media (min-width: 576px) {
+@media (min-width: 0px) {
   .sm-order-1 {
     order: 1;
   }
@@ -1186,6 +1275,24 @@ a img.aligncenter {
 *
 * @package Minima-WP
 */
+/* if for any reason we use container for nav  then following property will align elemtns center vertically */
+#header-wrapper .container {
+  align-items: center;
+}
+
+/* nav-default -1 */
+.nav-one, ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-one {
+  padding: 0.5rem .8rem 0.5rem 0;
+}
+
 /**
 * Layout style for footer
 *
