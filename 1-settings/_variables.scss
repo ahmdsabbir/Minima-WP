@@ -7,6 +7,11 @@
 /*
 ############################################
         Font Related Variables
+        ----------------------
+        fs  = font-size
+        fst = font-style
+        ff  = font-family
+        fw  = font-weight
 ############################################
 */
 
@@ -55,15 +60,12 @@ $fs-pre : 1em;
 
 /*
 ############################################
-Margin Related Variables
+        Border Related Variables
+        ------------------------
+        br = border-radious
 ############################################
 */
-$mt-para        : 0;
-$mt-heading     : 0;
-
-$mb-para        : 1.6rem;
-$mb-heading     : 1rem;
-
+$br-btn: 0;
 
 /*
 ############################################
@@ -83,6 +85,12 @@ $xl: 1200px;
 /*
 ############################################
         spacing Related Variables
+        -------------------------
+        g  = gap
+        p  = padding
+        m  = margin
+        mt = margin-top
+        mb = margin-bottom
 ############################################
 */
 
@@ -93,10 +101,22 @@ $g-column: 1rem;
 //Padding
 $p-base         : 0;
 $p-container    : $p-base;
+$p-btn          : .5rem 1rem;
+
+//Margin
+$mt-para        : 0;
+$mt-heading     : 0;
+
+$mb-para        : 1.6rem;
+$mb-heading     : 1rem;
+
+$m-btn          : .54rem;
 
 /*
 ############################################
         Color Related Variables
+        -----------------------
+        clr = color
 ############################################
 */
 
@@ -116,6 +136,8 @@ $clr-btn        : $black;
 /*
 ############################################
         Line-height Related Variables
+        -----------------------------
+        lh = line height
 ############################################
 */
 $lh : 1.6; //universal  line height
@@ -127,8 +149,12 @@ $lh-btn         : 1.5;
 
 /*
 ############################################
-        Width Related Variables
+        Misfit Variables
+        ----------------------
+        bw = border-width
 ############################################
 */
-// bw = border-width
-$bw-btn : 1px;
+// 
+$br-btn : 1px;
+
+

@@ -52,3 +52,39 @@
     flex-direction  : colulmn;
     padding         : 1rem;
 }
+
+/*
+############################################
+        Button Related Mixins
+############################################
+*/
+@mixin btn-reset() {
+    display         : inline;
+    padding         : $p-btn;
+    margin          : $m-btn;
+    border          : none;
+    border-radius   : $br-btn;
+    background-color: transparent;
+    text-align      : center;
+    text-decoration : none;
+    font-size       : $fs-btn;
+    font-weight     : $fw-btn;
+    color           : $clr-btn;
+    cursor          : pointer;
+
+    &:hover {
+        color: $clr-btn;
+    }
+}
+
+@mixin btn($type: 'default') {
+    @include btn-reset();
+    @if $type == "rounded" {
+        border-radius: 5rem;
+        padding: $p-btn;
+    }
+    @else if $type == 'fluid' {
+        display: block;
+        width: 100%;
+    }
+}
