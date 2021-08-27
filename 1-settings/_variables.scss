@@ -110,7 +110,7 @@ $mt-heading     : 0;
 $mb-para        : 1.6rem;
 $mb-heading     : 1rem;
 
-$m-btn          : .54rem;
+$m-btn          : 0;
 
 /*
 ############################################
@@ -131,6 +131,7 @@ $background : #FCF5ED;
 $clr-body       : $white;
 $clr-heading    : $black;
 $clr-btn        : $black;
+$clr-shadow     : lighten($black, 30%);
 
 
 /*
@@ -156,5 +157,3 @@ $lh-btn         : 1.5;
 */
 // 
 $br-btn : 1px;
-
-

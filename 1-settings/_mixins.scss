@@ -53,13 +53,20 @@
     padding         : 1rem;
 }
 
+
+@mixin rounded($radius: 0.5em) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
+
 /*
 ############################################
         Button Related Mixins
 ############################################
 */
 @mixin btn-reset() {
-    display         : inline;
+    display         : inline-block;
     padding         : $p-btn;
     margin          : $m-btn;
     border          : none;
@@ -80,7 +87,7 @@
 @mixin btn($type: 'default') {
     @include btn-reset();
     @if $type == "rounded" {
-        border-radius: 5rem;
+        @include rounded(5rem);
         padding: $p-btn;
     }
     @else if $type == 'fluid' {
@@ -88,3 +95,29 @@
         width: 100%;
     }
 }
+
+/**
+* transition
+*/
+@mixin transition($for: all, $time-in: 100ms, $type: ease-in-out, $time-out: 0s) {
+    transition: $for $time-in $type $time-out;
+    -moz-transition: $for $time-in $type $time-out;
+    -webkit-transition: $for $time-in $type $time-out;
+    -o-transition: $for $time-in $type $time-out;
+}
+
+/**
+* box-shadow
+*/
+@mixin box-shadow($top: 0px, $left: 0px, $blur: 1px, $spread: 8px, $color: $clr-shadow, $inset: false) {
+    @if $inset {
+      -webkit-box-shadow:inset $top $left $blur $color;
+      -moz-box-shadow:inset $top $left $blur $color;
+      box-shadow:inset $top $left $blur $color;
+    } @else {
+      -webkit-box-shadow: $top $left $blur $color;
+      -moz-box-shadow: $top $left $blur $color;
+      box-shadow: $top $left $blur $color;
+    }
+  }
+  

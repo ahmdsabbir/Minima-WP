@@ -6,17 +6,26 @@
 
 .btn {
     @include btn;
+    @include transition;
 }
 .btn-fluid {
     @include btn('fluid');
+    @include transition;
 }
 .btn-rounded {
-    @include btn('rounded')
+    @include btn('rounded');
+    @include transition;
 }
 
 @each $color-name, $value in $theme-colors {
     .btn-#{$color-name} {
         background-color: $value;
-        color           : btn-text-color($value); 
+        color           : set-text-color($value); 
+        
+        &:hover {
+            @include box-shadow;
+            background-color: btn-hover-bg($value);
+            color           : set-text-color($value); 
+        }
     }
 }

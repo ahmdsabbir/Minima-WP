@@ -9,12 +9,22 @@
         Button Related Functions
 ############################################
 */
-@function btn-text-color($color) {
+@function set-text-color($color) {
 
     @if (lightness($color) > 50) {
         @return $black;
     } @else {
         @return $white;
+    }
+
+}
+
+@function btn-hover-bg($color) {
+
+    @if (lightness($color) > 50) {
+        @return darken($color, 13%);
+    } @else {
+        @return lighten($color, 13%);
     }
 
 }
