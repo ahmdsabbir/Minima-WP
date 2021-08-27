@@ -4,9 +4,6 @@
 * @package Minima-WP
 */
 
-//variables
-$btn-types: "fluid" "rounded";
-
 .btn {
     @include btn;
 }
