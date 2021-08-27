@@ -92,7 +92,7 @@
     }
     @else if $type == 'fluid' {
         display: block;
-        width: 100%;
+        max-width: 100%;
     }
 }
 

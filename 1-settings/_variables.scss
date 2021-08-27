@@ -39,12 +39,13 @@ $ff-btn         : inherit;
 
 // font-style
 $fst-heading      : normal;
-
+$fs-breadcrumb    : normal;
 //font-weight
 
 $fw-base       : 400; 
 $fw-heading    : bolder;
 $fw-btn        : normal;
+$fw-breadcrumb  : normal;
 
 $fs-h1  : 2rem;
 $fs-h2  : 1.8rem;
@@ -126,13 +127,26 @@ $secondary  : #3ed78e;
 $contrast   : #EBBA84;
 $black      : #050505;
 $white      : #fdfeff;
-$background : #FCF5ED;
+$gray       : #9ca3af;
+
+$background : #f7f8f8;
 
 $clr-body       : $white;
 $clr-heading    : $black;
 $clr-btn        : $black;
 $clr-shadow     : lighten($black, 30%);
+$clr-bg-breadcrumb: $background;
 
+/*
+############################################
+        Line-height Related Variables
+        -----------------------------
+        h = height
+        w = width
+############################################
+*/
+$w-breadcrumb : 100%;
+$h-breadcrumb : 5rem;
 
 /*
 ############################################
@@ -155,5 +169,5 @@ $lh-btn         : 1.5;
         bw = border-width
 ############################################
 */
-// 
-$br-btn : 1px;
+// buttons
+$bw-btn : 1px;

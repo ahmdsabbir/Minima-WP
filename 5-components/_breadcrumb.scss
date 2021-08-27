@@ -1,0 +1,28 @@
+.breadcrumb {
+    min-width: $w-breadcrumb;
+    min-height: $h-breadcrumb;
+    background-color: $clr-bg-breadcrumb;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: $fw-breadcrumb;
+        font-style: $fs-breadcrumb;
+
+        &::after {
+            content: '/';
+            display: inline-block;
+            margin-left: .5rem;
+            margin-right: .5rem;
+            color  : $black;
+            cursor: text;
+        }
+    }
+    span.current {
+        color: $gray;
+        cursor: not-allowed;
+    }
+}
