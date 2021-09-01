@@ -166,8 +166,12 @@ $lh-btn         : 1.5;
 ############################################
         Misfit Variables
         ----------------------
-        bw = border-width
+        br = border-radius
 ############################################
 */
 // buttons
-$bw-btn : 1px;
+$br-btn : 1px;
+
+$br-sm  : .25rem;
+$br-md  : .5rem;
+$br-lg  : 1rem;

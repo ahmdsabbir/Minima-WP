@@ -120,4 +120,45 @@
       box-shadow: $top $left $blur $color;
     }
   }
+
+
+/*
+############################################
+        Border Radius Related Mixins
+############################################
+*/
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin border-radius-detailed($tl:null, $tr:null, $br:null, $bl:null, ) {
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr;
+    border-bottom-right-radius: $br;
+    border-bottom-left-radius: $bl;
+}
+
+
+/*
+############################################
+        Misfits
+############################################
+*/
+
+/*
+*  hide or show an element, useful for fade in/out animations
+*/
+
+@mixin fade($type) {
+    @if $type== "hide" {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 1s, opacity 1s;
+    } @else if $type== "show" {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 1s, opacity 1s;
+    }
+  }
   

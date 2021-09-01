@@ -1,0 +1,1566 @@
+/**
+* Bundle everything together
+*
+* @package WP-Minima
+*/
+/**
+* Bundle all settings
+*
+* @package Minima-WP
+*/
+@import url(c:\Users\ahmds\Documents\sandbox\WP-Minima\0-vendor\icons\style.css);
+/**
+* Variables
+*
+* @package Minima-WP
+*/
+/*
+############################################
+        Font Related Variables
+        ----------------------
+        fs  = font-size
+        fst = font-style
+        ff  = font-family
+        fw  = font-weight
+############################################
+*/
+/*
+############################################
+        Border Related Variables
+        ------------------------
+        br = border-radious
+############################################
+*/
+/*
+############################################
+        Layout Related Variables
+############################################
+*/
+/*
+* Breakpoints
+*
+* We are mobile first, So the breakpoint starts at 0
+*/
+/*
+############################################
+        spacing Related Variables
+        -------------------------
+        g  = gap
+        p  = padding
+        m  = margin
+        mt = margin-top
+        mb = margin-bottom
+############################################
+*/
+/*
+############################################
+        Color Related Variables
+        -----------------------
+        clr = color
+############################################
+*/
+/*
+############################################
+        Line-height Related Variables
+        -----------------------------
+        h = height
+        w = width
+############################################
+*/
+/*
+############################################
+        Line-height Related Variables
+        -----------------------------
+        lh = line height
+############################################
+*/
+/*
+############################################
+        Misfit Variables
+        ----------------------
+        br = border-radius
+############################################
+*/
+/**
+* Maps
+*
+* @package Minima-WP
+*/
+/**
+* Browser Reset
+*
+* Inspired By necoas/normalizer
+* @link https://github.com/necolas/normalize.css/blob/master/normalize.css
+*
+* @package Minima-WP
+*/
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  line-height: 1.6;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  /* 2 */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  /* only workds on mack os */
+  -webkit-font-smoothing: antialiased;
+  /* only workds on mack os */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+############################################
+        Text level semantics
+############################################
+*/
+/**
+   * Remove the margin in all browsers.
+   */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+form,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* font style for whole site */
+body {
+  font-size: clamp(12px, calc(.8rem + .25vw), 20px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block;
+}
+
+/*
+############################################
+        Grouping content
+############################################
+*/
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+############################################
+        Embedded content
+############################################
+*/
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none;
+}
+
+/*
+############################################
+        Forms
+############################################
+*/
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type="button"] :-moz-focusring,
+[type="reset"] :-moz-focusring,
+[type="submit"] :-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+############################################
+        Interactive
+############################################
+*/
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item;
+}
+
+/*
+############################################
+        Misc
+############################################
+*/
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none;
+}
+
+/**
+* Mixins
+*
+* @package Minima-WP
+*/
+/*
+############################################
+        Button Related Mixins
+############################################
+*/
+/**
+* transition
+*/
+/**
+* box-shadow
+*/
+/*
+############################################
+        Border Radius Related Mixins
+############################################
+*/
+/*
+############################################
+        Misfits
+############################################
+*/
+/*
+*  hide or show an element, useful for fade in/out animations
+*/
+/**
+* Functions
+*
+* @package Minima-WP
+*/
+/*
+############################################
+        Button Related Functions
+############################################
+*/
+/**
+* animations
+*
+* @package Minima-WP
+*/
+/*
+* @link https://dev.to/alemesa/10-awesome-sass-scss-mixins-5ci2
+*/
+/**
+* Bundle all Base
+*
+* @package Minima-WP
+*/
+/**
+* Barebone base style for typography
+*
+* @package Minima-WP
+*/
+p {
+  font-family: inherit;
+  font-size: inherit;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  line-height: 1.3;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bolder;
+  color: #050505;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/**
+* Barebone base style for links
+*
+* @package Minima-WP
+*/
+/**
+* Barebone base style for forms
+*
+* @package Minima-WP
+*/
+/**
+* Barebone base style for media
+*
+* @package Minima-WP
+*/
+/**
+* Barebone base style for Misc html tags
+*
+* @package Minima-WP
+*/
+/**
+* Bundle all utilities
+*
+* @package Minima-WP
+*/
+/**
+* Wordpress Core Utility Styles
+*
+* @link https://codex.wordpress.org/CSS
+*
+* @package Minima-WP
+*/
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/**
+* Utility style for Typography
+*
+* @package Minima-WP
+*/
+.text-centered {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justified {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/**
+* utility Style for links
+*
+* @package Minima-WP
+*/
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: none;
+  border-radius: 1px;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #050505;
+  cursor: pointer;
+  transition: all 100ms ease-in-out 0s;
+  -moz-transition: all 100ms ease-in-out 0s;
+  -webkit-transition: all 100ms ease-in-out 0s;
+  -o-transition: all 100ms ease-in-out 0s;
+}
+
+.btn:hover {
+  color: #050505;
+}
+
+.btn-fluid {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: none;
+  border-radius: 1px;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #050505;
+  cursor: pointer;
+  display: block;
+  max-width: 100%;
+  transition: all 100ms ease-in-out 0s;
+  -moz-transition: all 100ms ease-in-out 0s;
+  -webkit-transition: all 100ms ease-in-out 0s;
+  -o-transition: all 100ms ease-in-out 0s;
+}
+
+.btn-fluid:hover {
+  color: #050505;
+}
+
+.btn-rounded {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: none;
+  border-radius: 1px;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #050505;
+  cursor: pointer;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  transition: all 100ms ease-in-out 0s;
+  -moz-transition: all 100ms ease-in-out 0s;
+  -webkit-transition: all 100ms ease-in-out 0s;
+  -o-transition: all 100ms ease-in-out 0s;
+}
+
+.btn-rounded:hover {
+  color: #050505;
+}
+
+.btn-primary {
+  background-color: #11A683;
+  color: #fdfeff;
+}
+
+.btn-primary:hover {
+  -webkit-box-shadow: 0px 0px 1px #525252;
+  box-shadow: 0px 0px 1px #525252;
+  background-color: #17e2b2;
+  color: #fdfeff;
+}
+
+.btn-secondary {
+  background-color: #3ed78e;
+  color: #050505;
+}
+
+.btn-secondary:hover {
+  -webkit-box-shadow: 0px 0px 1px #525252;
+  box-shadow: 0px 0px 1px #525252;
+  background-color: #24af6d;
+  color: #050505;
+}
+
+.btn-contrast {
+  background-color: #EBBA84;
+  color: #050505;
+}
+
+.btn-contrast:hover {
+  -webkit-box-shadow: 0px 0px 1px #525252;
+  box-shadow: 0px 0px 1px #525252;
+  background-color: #e29a4b;
+  color: #050505;
+}
+
+.btn-dark {
+  background-color: #050505;
+  color: #fdfeff;
+}
+
+.btn-dark:hover {
+  -webkit-box-shadow: 0px 0px 1px #525252;
+  box-shadow: 0px 0px 1px #525252;
+  background-color: #262626;
+  color: #fdfeff;
+}
+
+/**
+* Utility  style for forms
+*
+* @package Minima-WP
+*/
+/**
+* Utility styles for media
+*
+* @package Minima-WP
+*/
+/**
+* utility helper styles
+*
+* @package Minima-WP
+*/
+.br-sm {
+  border-radius: 0.25rem;
+}
+
+.br-tl-sm {
+  border-top-left-radius: 0.25rem;
+}
+
+.br-tr-sm {
+  border-top-right-radius: 0.25rem;
+}
+
+.br-bl-sm {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.br-br-sm {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.br-md {
+  border-radius: 0.5rem;
+}
+
+.br-tl-md {
+  border-top-left-radius: 0.5rem;
+}
+
+.br-tr-md {
+  border-top-right-radius: 0.5rem;
+}
+
+.br-bl-md {
+  border-bottom-left-radius: 0.5rem;
+}
+
+.br-br-md {
+  border-bottom-right-radius: 0.5rem;
+}
+
+.br-lg {
+  border-radius: 1rem;
+}
+
+.br-tl-lg {
+  border-top-left-radius: 1rem;
+}
+
+.br-tr-lg {
+  border-top-right-radius: 1rem;
+}
+
+.br-bl-lg {
+  border-bottom-left-radius: 1rem;
+}
+
+.br-br-lg {
+  border-bottom-right-radius: 1rem;
+}
+
+/*
+* Adds backgrounds to elements based on theme-color
+* and sets text color according to background color lightness
+*/
+.bg-primary {
+  background-color: #11A683;
+  color: #fdfeff;
+}
+
+.bg-secondary {
+  background-color: #3ed78e;
+  color: #050505;
+}
+
+.bg-contrast {
+  background-color: #EBBA84;
+  color: #050505;
+}
+
+.bg-dark {
+  background-color: #050505;
+  color: #fdfeff;
+}
+
+/**
+* Bundle all layout styles
+*
+* @package Minima-WP
+*/
+/**
+* Layout styles for grid
+*
+* @package Minima-WP
+*/
+/*
+############################################
+        container class
+############################################
+*/
+.container,
+.container-thin {
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  gap: 1rem 1rem;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /*
+  * 12 Column Grid
+  */
+}
+
+.container > *,
+.container-thin > * {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 0px) {
+  .container .sm-1,
+  .container-thin .sm-1 {
+    grid-column: span 1;
+  }
+  .container .sm-2,
+  .container-thin .sm-2 {
+    grid-column: span 2;
+  }
+  .container .sm-3,
+  .container-thin .sm-3 {
+    grid-column: span 3;
+  }
+  .container .sm-4,
+  .container-thin .sm-4 {
+    grid-column: span 4;
+  }
+  .container .sm-5,
+  .container-thin .sm-5 {
+    grid-column: span 5;
+  }
+  .container .sm-6,
+  .container-thin .sm-6 {
+    grid-column: span 6;
+  }
+  .container .sm-7,
+  .container-thin .sm-7 {
+    grid-column: span 7;
+  }
+  .container .sm-8,
+  .container-thin .sm-8 {
+    grid-column: span 8;
+  }
+  .container .sm-9,
+  .container-thin .sm-9 {
+    grid-column: span 9;
+  }
+  .container .sm-10,
+  .container-thin .sm-10 {
+    grid-column: span 10;
+  }
+  .container .sm-11,
+  .container-thin .sm-11 {
+    grid-column: span 11;
+  }
+  .container .sm-12,
+  .container-thin .sm-12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 768px) {
+  .container .md-1,
+  .container-thin .md-1 {
+    grid-column: span 1;
+  }
+  .container .md-2,
+  .container-thin .md-2 {
+    grid-column: span 2;
+  }
+  .container .md-3,
+  .container-thin .md-3 {
+    grid-column: span 3;
+  }
+  .container .md-4,
+  .container-thin .md-4 {
+    grid-column: span 4;
+  }
+  .container .md-5,
+  .container-thin .md-5 {
+    grid-column: span 5;
+  }
+  .container .md-6,
+  .container-thin .md-6 {
+    grid-column: span 6;
+  }
+  .container .md-7,
+  .container-thin .md-7 {
+    grid-column: span 7;
+  }
+  .container .md-8,
+  .container-thin .md-8 {
+    grid-column: span 8;
+  }
+  .container .md-9,
+  .container-thin .md-9 {
+    grid-column: span 9;
+  }
+  .container .md-10,
+  .container-thin .md-10 {
+    grid-column: span 10;
+  }
+  .container .md-11,
+  .container-thin .md-11 {
+    grid-column: span 11;
+  }
+  .container .md-12,
+  .container-thin .md-12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 960px) {
+  .container .lg-1,
+  .container-thin .lg-1 {
+    grid-column: span 1;
+  }
+  .container .lg-2,
+  .container-thin .lg-2 {
+    grid-column: span 2;
+  }
+  .container .lg-3,
+  .container-thin .lg-3 {
+    grid-column: span 3;
+  }
+  .container .lg-4,
+  .container-thin .lg-4 {
+    grid-column: span 4;
+  }
+  .container .lg-5,
+  .container-thin .lg-5 {
+    grid-column: span 5;
+  }
+  .container .lg-6,
+  .container-thin .lg-6 {
+    grid-column: span 6;
+  }
+  .container .lg-7,
+  .container-thin .lg-7 {
+    grid-column: span 7;
+  }
+  .container .lg-8,
+  .container-thin .lg-8 {
+    grid-column: span 8;
+  }
+  .container .lg-9,
+  .container-thin .lg-9 {
+    grid-column: span 9;
+  }
+  .container .lg-10,
+  .container-thin .lg-10 {
+    grid-column: span 10;
+  }
+  .container .lg-11,
+  .container-thin .lg-11 {
+    grid-column: span 11;
+  }
+  .container .lg-12,
+  .container-thin .lg-12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container .xl-1,
+  .container-thin .xl-1 {
+    grid-column: span 1;
+  }
+  .container .xl-2,
+  .container-thin .xl-2 {
+    grid-column: span 2;
+  }
+  .container .xl-3,
+  .container-thin .xl-3 {
+    grid-column: span 3;
+  }
+  .container .xl-4,
+  .container-thin .xl-4 {
+    grid-column: span 4;
+  }
+  .container .xl-5,
+  .container-thin .xl-5 {
+    grid-column: span 5;
+  }
+  .container .xl-6,
+  .container-thin .xl-6 {
+    grid-column: span 6;
+  }
+  .container .xl-7,
+  .container-thin .xl-7 {
+    grid-column: span 7;
+  }
+  .container .xl-8,
+  .container-thin .xl-8 {
+    grid-column: span 8;
+  }
+  .container .xl-9,
+  .container-thin .xl-9 {
+    grid-column: span 9;
+  }
+  .container .xl-10,
+  .container-thin .xl-10 {
+    grid-column: span 10;
+  }
+  .container .xl-11,
+  .container-thin .xl-11 {
+    grid-column: span 11;
+  }
+  .container .xl-12,
+  .container-thin .xl-12 {
+    grid-column: span 12;
+  }
+}
+
+/*
+############################################
+        Grid Order
+############################################
+*/
+@media (min-width: 0px) {
+  .sm-order-1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .sm-order-2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .sm-order-3 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .sm-order-4 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .sm-order-5 {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .sm-order-6 {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .sm-order-7 {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .sm-order-8 {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  .sm-order-9 {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  .sm-order-10 {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+  .sm-order-11 {
+    -webkit-box-ordinal-group: 12;
+        -ms-flex-order: 11;
+            order: 11;
+  }
+  .sm-order-12 {
+    -webkit-box-ordinal-group: 13;
+        -ms-flex-order: 12;
+            order: 12;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-order-1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .md-order-2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .md-order-3 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .md-order-4 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .md-order-5 {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .md-order-6 {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .md-order-7 {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .md-order-8 {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  .md-order-9 {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  .md-order-10 {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+  .md-order-11 {
+    -webkit-box-ordinal-group: 12;
+        -ms-flex-order: 11;
+            order: 11;
+  }
+  .md-order-12 {
+    -webkit-box-ordinal-group: 13;
+        -ms-flex-order: 12;
+            order: 12;
+  }
+}
+
+@media (min-width: 960px) {
+  .lg-order-1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .lg-order-2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .lg-order-3 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .lg-order-4 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .lg-order-5 {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .lg-order-6 {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .lg-order-7 {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .lg-order-8 {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  .lg-order-9 {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  .lg-order-10 {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+  .lg-order-11 {
+    -webkit-box-ordinal-group: 12;
+        -ms-flex-order: 11;
+            order: 11;
+  }
+  .lg-order-12 {
+    -webkit-box-ordinal-group: 13;
+        -ms-flex-order: 12;
+            order: 12;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl-order-1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .xl-order-2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .xl-order-3 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .xl-order-4 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .xl-order-5 {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .xl-order-6 {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .xl-order-7 {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .xl-order-8 {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  .xl-order-9 {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  .xl-order-10 {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+  .xl-order-11 {
+    -webkit-box-ordinal-group: 12;
+        -ms-flex-order: 11;
+            order: 11;
+  }
+  .xl-order-12 {
+    -webkit-box-ordinal-group: 13;
+        -ms-flex-order: 12;
+            order: 12;
+  }
+}
+
+/**
+* Layout styles for header
+*
+* @package Minima-WP
+*/
+/**
+* Layout style for footer
+*
+* @package Minima-WP
+*/
+/**
+* Layout style for Sidebars
+*
+* @package Minima-WP
+*/
+/**
+* Bundle all components
+*
+* Not sure if we'd need to bundle all components in a single file, or we'd use them seperately as per need basis.
+* But let's keep it for now
+*
+* @package Minima-WP
+*/
+.breadcrumb {
+  min-width: 100%;
+  min-height: 5rem;
+  background-color: #f7f8f8;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.breadcrumb a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.breadcrumb a::after {
+  content: '/';
+  display: inline-block;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  color: #050505;
+  cursor: text;
+}
+
+.breadcrumb span.current {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/**
+* Bundle all block styles
+*
+* @package Minima-WP
+*/
+/*# sourceMappingURL=minima-wp.css.map */
