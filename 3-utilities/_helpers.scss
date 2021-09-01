@@ -6,23 +6,23 @@
 
 @each $sizes, $value in $br-sizes {
 
-    .br-#{$sizes} {
+    .rounded-#{$sizes} {
         @include border-radius($value);
     }
 
-    .br-tl-#{$sizes} {
+    .rounded-tl-#{$sizes} {
         @include border-radius-detailed($tl: $value);
     }
 
-    .br-tr-#{$sizes} {
+    .rounded-tr-#{$sizes} {
         @include border-radius-detailed($tr: $value);
     }
 
-    .br-bl-#{$sizes} {
+    .rounded-bl-#{$sizes} {
         @include border-radius-detailed($bl: $value);
     }
 
-    .br-br-#{$sizes} {
+    .rounded-br-#{$sizes} {
         @include border-radius-detailed($br: $value);
     }
         
