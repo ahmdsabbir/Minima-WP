@@ -100,11 +100,23 @@ $g-row: 1rem;
 $g-column: 1rem;
 
 //Padding
+$p-xs   : .5rem;
+$p-sm   : .75rem;
+$p-md   : 1rem;
+$p-lg   : 1.5rem;
+$p-xl   : 2rem;
+
 $p-base         : 0;
 $p-container    : $p-base;
 $p-btn          : .5rem 1rem;
 
 //Margin
+$m-xs   : .5rem;
+$m-sm   : .75rem;
+$m-md   : 1rem;
+$m-lg   : 1.5rem;
+$m-xl   : 2rem;
+
 $mt-para        : 0;
 $mt-heading     : 0;
 
