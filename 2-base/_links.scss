@@ -3,3 +3,21 @@
 *
 * @package Minima-WP
 */
+
+a {
+    color: $clr-link-base;
+    text-decoration: $td-link;
+    text-transform: $tt-link;
+
+    &:hover {
+        color: $clr-link-hover;
+        text-decoration: none;
+    }
+    &:active {
+        color: $clr-link-active;
+    }
+    &:visited {
+        color: $clr-link-visited;
+    }
+
+}

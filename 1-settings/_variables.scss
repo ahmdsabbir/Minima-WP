@@ -58,6 +58,9 @@ $fs-para: inherit;
 $fs-btn : 1rem;
 $fs-pre : 1em;
 
+//text
+$tt-link: none;
+$td-link: underlined;
 
 /*
 ############################################
@@ -148,6 +151,11 @@ $clr-heading    : $black;
 $clr-btn        : $black;
 $clr-shadow     : lighten($black, 30%);
 $clr-bg-breadcrumb: $background;
+
+$clr-link-base          : $primary;
+$clr-link-hover         : $secondary;
+$clr-link-active        : $black;
+$clr-link-visited       : $contrast;
 
 /*
 ############################################

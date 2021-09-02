@@ -4,58 +4,9 @@
 * @package Minima-WP
 */
 
-/*
-############################################
-        container class
-############################################
-*/
+@import 'grids/core';
+@import 'grids/columns';
+@import 'grids/flow';
+@import 'grids/helpers';
 
-// full width container
-.container,
-.container-thin {
-  max-width             : 100%;
-  display               : grid;
-  grid-template-columns : repeat(12, 1fr);
-  gap                   : $g-row $g-column;
-  padding               : $p-container;
-  margin-left           : auto;
-  margin-right          : auto;
-
-  > * {
-    grid-column: 1 / -1;
-  }
-
-  /*
-  * 12 Column Grid
-  */
-
-  @each $breakpoint in map-keys($breakpoints) {
-    $breakpoint-width: map-get($breakpoints, $breakpoint);
-    
-    @media (min-width: $breakpoint-width) {
-      @for $i from 1 through 12 {
-        .#{$breakpoint}-#{$i} {
-          grid-column: span $i;
-        }
-      }
-    }
-  }
-}
-
-/*
-############################################
-        Grid Order
-############################################
-*/
-@each $breakpoint in map-keys($breakpoints) {
-  $breakpoint-width: map-get($breakpoints, $breakpoint);
-  
-  @media (min-width: $breakpoint-width) {
-    @for $i from 1 through 12 {
-      .#{$breakpoint}-order-#{$i} {
-        order:  $i;
-      }
-    }
-  }
-}
 
