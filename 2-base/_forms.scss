@@ -3,3 +3,70 @@
 *
 * @package Minima-WP
 */
+
+label {
+    cursor: default;
+    font-size: 1rem;
+}
+
+input {
+    display         : inline-block;
+    font-size       : 1rem;
+    padding         : 1rem;
+    background-color: transparent;
+    line-height     : $lh-btn;
+    text-align      : center;
+    text-decoration : none;
+
+    @include border($color: $gray);
+}
+
+input[readonly] {
+    border-style: dotted;
+    cursor      : not-allowed;
+    color       : $gray;
+}
+
+select {
+    padding : 1rem;
+    cursor  : pointer;
+    
+    @include border($color: $gray);
+    @include border-radius;
+
+    &:hover {
+        @include border($color: $black);
+    }
+
+    &:focus {
+        @include border($color: $primary);
+    }
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    cursor          : pointer;
+
+    &:hover {
+        @include border($color: $black);
+    }
+
+    &:focus {
+        @include border($color: $primary);
+    }
+}
+
+input[type=text], input[type=password] {
+    text-align: left;
+
+    &:hover {
+        @include border($color: $black);
+    }
+
+    &:focus {
+        @include border($color: $primary);
+    }
+}
+
+//checkbox
+
+//radio-button

@@ -58,9 +58,13 @@ $fs-para: inherit;
 $fs-btn : 1rem;
 $fs-pre : 1em;
 
+$fs-input-base : 1rem;
+
 //text
 $tt-link: none;
 $td-link: underlined;
+
+
 
 /*
 ############################################
@@ -111,7 +115,7 @@ $p-xl   : 2rem;
 
 $p-base         : 0;
 $p-container    : $p-base;
-$p-btn          : .5rem 1rem;
+$p-btn          : 1rem;
 
 //Margin
 $m-xs   : .5rem;
@@ -157,9 +161,11 @@ $clr-link-hover         : $secondary;
 $clr-link-active        : $black;
 $clr-link-visited       : $contrast;
 
+$clr-bg-input-btn       : $white;
+
 /*
 ############################################
-        Line-height Related Variables
+        width-height Related Variables
         -----------------------------
         h = height
         w = width

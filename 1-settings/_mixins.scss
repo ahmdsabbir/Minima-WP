@@ -69,8 +69,6 @@
     display         : inline-block;
     padding         : $p-btn;
     margin          : $m-btn;
-    border          : none;
-    border-radius   : $br-btn;
     background-color: transparent;
     text-align      : center;
     text-decoration : none;
@@ -78,6 +76,9 @@
     font-weight     : $fw-btn;
     color           : $clr-btn;
     cursor          : pointer;
+
+    @include border($color: $black);
+    @include border-radius(0);
 
     &:hover {
         color: $clr-btn;
@@ -128,7 +129,11 @@
 ############################################
 */
 
-@mixin border-radius($radius) {
+@mixin border($size: 1px, $style:solid, $color: $black) {
+    border: $size $style $color;
+}
+
+@mixin border-radius($radius: 2px) {
     border-radius: $radius;
 }
 
